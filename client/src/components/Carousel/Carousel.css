@@ -1,0 +1,47 @@
+#carouselWrapper {
+    color: black;
+    /* text-shadow: 0 0 5px #ffffff; */
+    height: 100vh;
+}
+
+#prevButton, #nextButton {
+    position: absolute;
+    height: 100vh;
+    width: 10%;
+}
+
+#prevButton:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#nextButton:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.normalChange-enter, .fastChange-enter {
+    opacity: 0.01;
+}
+
+.normalChange-enter.normalChange-enter-active {
+    opacity: 1;
+    transition: opacity 2000ms ease-in;
+}
+
+.normalChange-leave, .fastChange-leave {
+    opacity: 1;
+}
+
+.normalChange-leave.normalChange-leave-active {
+    opacity: 0.01;
+    transition: opacity 2000ms ease-in;
+}
+
+.fastChange-enter.fastChange-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.fastChange-leave.fastChange-leave-active {
+    opacity: 0.01;
+    transition: opacity 500ms ease-in;
+}
