@@ -231,40 +231,32 @@ class Home extends Component {
 
   render() {
     return (
-
-<main>
-
-    <Carousel />
-    <Button />
-
-
-
-
-    <section id="sectionMenu">
-        <div className="row">
-            <div className="col-lg-12 mx-auto pb-5 px-5 sectionCol" id="aboutBox">
+        <main>
+            <Carousel />
+            <section id="sectionMenu">
                 <div className="row">
-                    <div className="col-lg-4">
-                      <div id="map" style={{height: "400px"}}></div>
-                    </div>
-                    <div className="col-lg-4" id="hours">
-                      <h2>HOURS & LOCATION</h2>
-                      <p>______<br />
-                      1200 SW Morrison St,<br />Portland, OR 97205<br />503.394.3890</p>
-                      <p>Mon - Thurs: 5:30 p.m. to 9:00 p.m.<br />Fri - Sat: 5:00 p.m. to 9:30 p.m.<br />Closed Sundays</p>
-                    </div>
-                    <div className="col-lg-4" id="about">
-                    <h2>INFO</h2>
-                    <p>______<br />
-                    Text about the restaurant here</p>
+                    <div className="col-lg-12 mx-auto pb-5 px-5 sectionCol" id="aboutBox">
+                        <div className="row">
+                            <div className="col-lg-4">
+                            <div id="map" style={{height: "400px"}}></div>
+                            </div>
+                            <div className="col-lg-4" id="hours">
+                            <h2>HOURS & LOCATION</h2>
+                            <p>______<br />
+                            1200 SW Morrison St,<br />Portland, OR 97205<br />503.394.3890</p>
+                            <p>Mon - Thurs: 5:30 p.m. to 9:00 p.m.<br />Fri - Sat: 5:00 p.m. to 9:30 p.m.<br />Closed Sundays</p>
+                            </div>
+                            <div className="col-lg-4" id="about">
+                            <h2>INFO</h2>
+                            <p>______<br />
+                            Text about the restaurant here</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <Footer />
-</main>
+            </section>
+            <Footer />
+        </main>
     );
   }
 }

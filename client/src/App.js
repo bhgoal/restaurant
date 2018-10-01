@@ -6,7 +6,6 @@ import About from "./pages/About";
 import Menu from "./pages/Menu";
 import Social from "./pages/Social";
 import NoMatch from "./pages/NoMatch";
-import Carousel from "./components/Carousel";
 import Nav from "./components/Nav";
 import './App.css';
 

@@ -1,8 +1,8 @@
 .hero-appear {
     opacity: 0.01;
-  }
+}
   
-  .hero-appear.hero-appear-active {
+.hero-appear.hero-appear-active {
     opacity: 1;
     transition: opacity 700ms ease-in;
-  }
+}
