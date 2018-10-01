@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-//import { List, ListItem } from "../../components/List";
+import Hero from "../../components/Hero";
 //import { Input, TextArea, FormBtn } from "../../components/Form";
-import Carousel from "../../components/Carousel";
+import Footer from "../../components/Footer";
 
 class About extends Component {
   state = {
@@ -63,34 +63,23 @@ class About extends Component {
     return (
 
 <main>
-    <section style={{background: `url(https://loremflickr.com/g/1920/1080/food)`, backgroundSize: "cover"}} id="sectionMenu">
+    <section id="sectionAbout">
+        <Hero image={"interior.jpg"} />
         <div className="row">
-            <div className="col-lg-10 mx-auto pb-5 px-5 sectionCol" id="aboutBox" style={{background: "rgba(255,255,255,0.8)"}}>
+            <div className="col-lg-12 mx-auto pb-5 px-5 sectionCol" id="aboutBox">
                 <div className="row">
-                    <div className="col-lg-12">
-                        <h1 className="display-4 my-4 text-center">About Me</h1>
-                        <hr className="mb-5" />
+                    <div className="col-lg-6">
+                        <img style={{width: "100%"}} src={window.location.origin + "/images/interior.jpg"} />
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col-lg-4">
-                        <div id="map" style={{height: "100%"}}></div>
-                    </div>
-                    <div className="col-lg-8" id="biography">
-                        <p>Hello, I am Bernard! I'm a full stack web developer who seeks to build user-oriented apps focused on both aesthetics and practicality. I previously helped develop a restaurant startup from a small food truck into a successful brick and mortar. Now I use principles taken from my business experience to guide my goals as a developer.</p>
+                    <div className="col-lg-6" id="biography">
+                        <h2>ABOUT US</h2>
+                        <p>______<br />Hello, we are Restaurant Name! We're a trendy restaurant in a hip part of town. We serve food, beverages, and other consumable things. From our beginnings in founding year here, we've focused on delivering a unique experience to each of our customers.</p>
                         <ul>
-                            <li>User-Focused Results — Improve user experience by recognizing their needs and tailoring the product to match.</li>
-                            <li>Seamless Teamwork Integration — Whether in the kitchen or on a dev team, understand others’ workflows and how to efficiently integrate my own.</li>
-                            <li>Constant Quest for Growth and Success — Seek out new knowledge and alternative strategies. Build my abilities in order to build a more effective, successful product.</li>
+                            <li>Quality Ingredients — Freshness. Farm to table. Small-batch. Artisan crafted. Responsibly sourced.</li>
+                            <li>Aesthetics — Antique looking light bulbs. Lots of mason jars. Serving things on a wooden plank. </li>
+                            <li>Community — Live music on weekends. Probably some cornhole boards. Ridiculous presence on Instagram.</li>
                             </ul>
-                        <p>I write code using:</p>
-                        <ul>
-                            <li>HTML, CSS, Javascript, jQuery</li>
-                            <li>React, Handlebars, Bootstrap, Materialize</li>
-                            <li>Node.js, Express, MongoDB, MySQL</li>
-                        </ul>
-                            
-                        <p>As someone who has been fascinated by computers and the internet since a young age, learning how websites function and how to create my own were a natural development for me. Creation and tinkering have always been interests of mine, as is apparent in the hobbies I've enjoyed over the years, which include RC cars, building computers, and working on cars.</p>
+                        <p>Swing on by and check us out!</p>
                     </div>
                 </div>
             </div>
@@ -102,9 +91,7 @@ class About extends Component {
 
 
 
-    <div className="footer text-white text-center">
-        Copyright © 2018
-    </div>
+    <Footer />
 </main>
     );
   }

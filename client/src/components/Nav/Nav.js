@@ -59,16 +59,16 @@ class Nav extends Component {
     console.log(navVisibility);
 
     return (
-      <nav className="navbar fixed-top navbar-expand-lg navbar-dark mb-5" id="mainNav" style={{display: navVisibility, background: `rgba(24, 24, 24, ${this.state.multiplier})`}}>
+      <nav className="navbar fixed-top navbar-expand-lg navbar-light navGradient" id="mainNav" style={{display: navVisibility, height: "200px", opacity: `${this.state.multiplier}`}}>
         <a className="navbar-brand p-0 ml-5" href="#pageTop" id="navbarBrand"><h1 id="nameHeader" style={{fontWeight: "400"}}><i className="fas fa-angle-double-up" id="homeArrow"></i></h1></a>
         <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <div className="navbar-nav ml-auto mr-2">
+          <div className="navbar-nav ml-auto mr-2" style={{marginBottom: "140px"}}>
               <NavLink exact id="navHome" className="nav-item nav-link" to="/" activeClassName="active">Home</NavLink>
-              <NavLink className="nav-item nav-link" to="/about" style={navlinkStyle}activeClassName="active">About</NavLink>
               <NavLink className="nav-item nav-link" to="/menu" style={navlinkStyle} activeClassName="active">Menu</NavLink>
+              <NavLink className="nav-item nav-link" to="/about" style={navlinkStyle}activeClassName="active">About</NavLink>
               <NavLink className="nav-item nav-link" to="/social" style={navlinkStyle}activeClassName="active">Social</NavLink>
           </div>
         </div>

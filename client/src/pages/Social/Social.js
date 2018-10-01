@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-//import { List, ListItem } from "../../components/List";
+import Hero from "../../components/Hero";
 //import { Input, TextArea, FormBtn } from "../../components/Form";
-import Carousel from "../../components/Carousel";
+import Footer from "../../components/Footer";
 
 class Social extends Component {
   state = {
@@ -30,26 +30,29 @@ class Social extends Component {
 
 <main>
 
-    <section style={{background: `url(https://loremflickr.com/g/1920/1080/food)`, backgroundSize: "cover"}} id="sectionSocial">
+    <section id="sectionSocial">
+        <Hero image={"chatting.jpg"} />
         <div className="row">
             <div className="col-lg-10 mx-auto pb-5 px-5 border sectionCol" id="contactBox">
                 <div className="row">
                     <div className="col-lg-12">
-                        <h1 className="display-4 my-4 text-center">Contact Me</h1>
+                        <h1 className="display-4 my-4 text-center">Get in touch with us!</h1>
                         <hr className="mb-5" />
                     </div>
                 </div>
                 <div className="row text-center">
                     <div className="col-lg-12 contactRow">
-                        Feel free to reach me through LinkedIn or email, or check out my GitHub!<br />
-                        I would love to get in contact with you!<br />
+                        Feel free to reach out to us through social media or email.<br />
+                        We would love to hear from you!<br />
                         <nav className="cl-effect-4 mt-4 contactNav">
-                        <a href="https://www.linkedin.com/in/bernard-goal-34018068/"><i className="fab fa-linkedin"></i>
-                            LinkedIn</a>
-                        <a href="https://www.github.com/bhgoal"><i className="fab fa-github-square"></i>
-                            GitHub</a>
-                        <a href="mailto:bernard.goal@gmail.com?subject=Hi Bernard!"><i className="fas fa-envelope-square"></i>
-                            Email Me</a></nav>
+                        <a href="https://www.instagram.com"><i className="fab fa-instagram"></i>
+                            {'\u00A0'}Instagram</a>
+                        <a href="https://www.facebook.com"><i className="fab fa-facebook-square"></i>
+                            {'\u00A0'}Facebook</a>
+                        <a href="https://www.twitter.com"><i className="fab fa-twitter-square"></i>
+                            {'\u00A0'}Twitter</a>
+                        <a href="mailto:email@gmail.com?subject=Hi Restaurant!"><i className="fas fa-envelope-square"></i>
+                            {'\u00A0'}Email Us</a></nav>
                     </div>
                 </div>
             </div>
@@ -58,9 +61,7 @@ class Social extends Component {
 
 
 
-    <div className="footer text-white text-center">
-        Copyright © 2018
-    </div>
+    <Footer />
 </main>
     );
   }

@@ -5,6 +5,7 @@ import { Col, Row, Container } from "../../components/Grid";
 //import { List, ListItem } from "../../components/List";
 //import { Input, TextArea, FormBtn } from "../../components/Form";
 import Carousel from "../../components/Carousel";
+import Footer from "../../components/Footer";
 import "./Home.css";
 
 class Home extends Component {
@@ -52,10 +53,180 @@ class Home extends Component {
   }
   
   initMap() {
-      var map = new window.google.maps.Map(document.getElementById('map'), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 8
+    var styledMapType = new window.google.maps.StyledMapType(
+    [
+        {
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#f5f5f5"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.icon",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#616161"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.text.stroke",
+          "stylers": [
+            {
+              "color": "#f5f5f5"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.land_parcel",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#bdbdbd"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#eeeeee"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#757575"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#e5e5e5"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        },
+        {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#ffffff"
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#757575"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#dadada"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#616161"
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        },
+        {
+          "featureType": "transit.line",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#e5e5e5"
+            }
+          ]
+        },
+        {
+          "featureType": "transit.station",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#eeeeee"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#c9c9c9"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        }
+      ],
+      {name: 'Styled Map'});
+        var map = new window.google.maps.Map(document.getElementById('map'), {
+        center: {lat: 45.521, lng: -122.684},
+        zoom: 16,
+        disableDefaultUI: true,
+        zoomControl: true,
+        mapTypeControl: false,
+        streetViewControl: false,
+        fullscreenControl: false
       });
+        var marker = new window.google.maps.Marker({position: {lat: 45.521, lng: -122.684}, map: map});
+      map.mapTypes.set('styled_map', styledMapType);
+        map.setMapTypeId('styled_map');
   }
 
   render() {
@@ -69,30 +240,30 @@ class Home extends Component {
 
 
 
-    <section className="parallax-window" data-parallax="scroll" data-image-src={window.location.origin + "/images/architecture_bg.jpg"} data-speed="0.4" id="sectionMenu">
+    <section id="sectionMenu">
         <div className="row">
-            <div className="col-lg-10 mx-auto pb-5 px-5 sectionCol" id="aboutBox">
+            <div className="col-lg-12 mx-auto pb-5 px-5 sectionCol" id="aboutBox">
                 <div className="row">
                     <div className="col-lg-4">
                       <div id="map" style={{height: "400px"}}></div>
                     </div>
-                    <div className="col-lg-4" id="biography">
-                      <h2><u>Hours and Location</u></h2>
-                      <p>4500 Pacific Ave,<br />Portland, OR 48238<br />718.394.3890</p>
+                    <div className="col-lg-4" id="hours">
+                      <h2>HOURS & LOCATION</h2>
+                      <p>______<br />
+                      1200 SW Morrison St,<br />Portland, OR 97205<br />503.394.3890</p>
                       <p>Mon - Thurs: 5:30 p.m. to 9:00 p.m.<br />Fri - Sat: 5:00 p.m. to 9:30 p.m.<br />Closed Sundays</p>
                     </div>
-                    <div className="col-lg-4" id="hours">
-                    <h2><u>Info</u></h2>
-                    <p>Text about the restaurant here</p>
+                    <div className="col-lg-4" id="about">
+                    <h2>INFO</h2>
+                    <p>______<br />
+                    Text about the restaurant here</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div className="footer text-white text-center">
-        Copyright © 2018
-    </div>
+    <Footer />
 </main>
     );
   }
